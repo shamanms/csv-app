@@ -1,0 +1,20 @@
+version: '3'
+services:
+  server:
+    image: csv-app-server
+    build: ./server
+    command: npm start
+    ports:
+      - '3001:3001'
+    depends_on:
+      - 'mongo'
+  mongo:
+    image: 'mongo'
+    ports:
+      - '27017:27017'
+  client:
+    image: csv-app-client
+    build: ./client
+    command: npm start
+    ports: 
+      - '3000:3000'
