@@ -1,0 +1,26 @@
+{
+  "name": "csv-app-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maxim Shamanov",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.307.0",
+    "csvtojson": "^2.0.8",
+    "koa": "^2.5.2",
+    "koa-body": "^4.0.4",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^2.0.1",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.6",
+    "mongodb": "^3.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
