@@ -1,0 +1,21 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    command: npm start
+    ports:
+      - '3001:3001'
+    depends_on:
+      - 'mongo'
+    links: 
+      - 'mongo'
+  mongo:
+    image: 'mongo'
+    restart: always
+    ports:
+      - '27017:27017'
+  client:
+    build: ./client
+    command: npm start
+    ports: 
+      - '3000:3000'
