@@ -4,6 +4,8 @@ import Dropzone from 'react-dropzone';
 
 class CsvUploader extends React.Component {
   onDrop = (files) => {
+    if (!files.length) return
+    
     this.props.onUpload(files);
   }
 
@@ -16,6 +18,7 @@ class CsvUploader extends React.Component {
           disabledClassName='bg-danger'
           disabled={isFetching}
           multiple={false}
+          accept='.csv'
           onDrop={this.onDrop}>
           <p className='text-center'>Upload your CSV files</p>
         </Dropzone>
