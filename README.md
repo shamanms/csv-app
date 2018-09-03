@@ -24,3 +24,7 @@ Should include REST API for transactions and additional endpoint for CSV file up
 
 ### Mongo
 Should store transactions data.
+
+## Instalation:
+
+`docker-compose up`
