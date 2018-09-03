@@ -24,3 +24,45 @@ Should include REST API for transactions and additional endpoint for CSV file up
 
 ### Mongo
 Should store transactions data.
+
+## Instalation:
+
+run `$ docker-compose up`
+
+after project starts, you may need to open IP address of your virtual machine(for example: 192.168.99.100).
+To get the IP address of machine:
+
+run `$ docker-machine ip`
+
+App ports:
+- :3000 for client interface
+- :3001 for backend
+
+## Project structure:
+
+```
+csv-app/
+  README.md
+  docker-compose.yml
+  client/
+    public
+    src/
+        actions
+        api
+        components
+        data/
+            selectors
+            services
+        reducers
+        App.js
+        index.js
+        store.js
+    Dockerfile
+    package.json
+  server/
+    Dockerfile
+    mongo.js
+    package.json
+    routes.js
+    server.js
+```

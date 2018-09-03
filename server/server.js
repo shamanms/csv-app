@@ -6,7 +6,9 @@ const cors = require('koa2-cors');
 const koaBody = require('koa-body');
 
 const app = new Koa();
-const router = new Router();
+const router = new Router({
+  prefix: '/api'
+});
 
 require('./mongo')(app);
 require('./routes')(router);
