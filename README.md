@@ -44,6 +44,7 @@ App ports:
 csv-app/
   README.md
   docker-compose.yml
+  CSVExample.csv
   client/
     public
     src/
