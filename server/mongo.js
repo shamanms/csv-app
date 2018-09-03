@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URL = 'mongodb://localhost:27017/csv-app';
+const MONGO_URL = 'mongodb://mongo:27017/csv-app';
 
 
 module.exports = function (app) {
